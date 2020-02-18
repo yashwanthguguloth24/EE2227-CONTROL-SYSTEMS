@@ -1,3 +1,5 @@
+#code for plot in the presentation
+#This code plots Bode plot for the given system function
 from scipy import signal
 import matplotlib.pyplot as plt
 s1 = signal.lti([2], [1, 3,2])
