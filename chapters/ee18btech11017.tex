@@ -135,4 +135,61 @@ We can observe that at $\omega_{gc}=20$ , $\phi=-216.86^{\circ}$
 As Phase Margin is negative . Therefore the closed loop system is unstable .
 We can verify closed loop stability using Routh-Hurwitz criterion.
 
+
+\item
+Verifying the above example using Routh-Hurwitz criterion.\\
+Let $T(s)$ be Closed loop transfer function ,
+\begin{align}
+T(s)=\frac{N(s)}{D(s)}=\frac{G(s)}{1+G(s)}
+\end{align}
+The characteristic equation is 
+\begin{align}
+D(s)=0  \\
+1+G(s)=0 
+\end{align}
+
+\begin{align}
+=> s^{3}+20s^{2}+100s+10000=0   \label{eq:7} 
+\end{align}
+\\
+Constructing routh array for (\ref{eq:7})..,
+\begin{align}
+\mydet{s^3\\s^2\\s}
+\mydet{1 & 100 & 0 \\ 20 & 10000 & 0 \\ -400 & 0 & 0}
+\end{align}\\
+
+\begin{align}
+\mydet{s^3\\s^2\\s\\s^0}
+\mydet{1 & 100 & 0 \\ 20 & 10000 & 0 \\ -400 & 0 & 0 \\ 10000 & 0 & 0}
+\end{align}\\
+
+There are two sign changes in the first column of the routh array. So, two poles lie on right half of s-plane. \\
+Therefore,the system is unstable.\\
+The following code generates routh array.
+\begin{lstlisting}
+codes/RouthHurwitz.py
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{enumerate}
