@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.4.4)  12 APR 2020 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.4.4)  12 APR 2020 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1298,20 +1298,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--91
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-[]\OT1/txr/m/n/12 At the gain cross over fre-quency
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--124
-\OT1/txr/m/n/12 For both the cases the pole in the
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+\OT1/txr/m/n/12 At the gain cross over fre-quency
  []
 
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+
+ []
+
+File: ./figures/ee18btech11017_1.eps Graphic file (type eps)
+<./figures/ee18btech11017_1.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 124--132
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [2]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
- [2
-
-]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
  (./gvv_control_manual.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 334.
@@ -1321,12 +1332,12 @@ Package rerunfilecheck Info: File `gvv_control_manual.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 31051 strings out of 494881
- 661886 string characters out of 6179628
+ 31056 strings out of 494881
+ 662007 string characters out of 6179628
  875323 words of memory out of 5000000
- 33798 multiletter control sequences out of 15000+600000
+ 33802 multiletter control sequences out of 15000+600000
  54754 words of font info for 123 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 55i,13n,67p,510b,1031s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,67p,510b,1033s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_control_manual.dvi (2 pages, 21740 bytes).
+Output written on gvv_control_manual.dvi (2 pages, 23816 bytes).

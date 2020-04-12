@@ -86,50 +86,53 @@ We can observe that at $\omega_{gc}=0$ , $\phi=0^{\circ}$
 Phase margin is measure of stability in closed-loop, dynamic-control systems.(i.e, For stability of a system both gain margin and phase margin should be positive.)
 \item
 \textbf{Example:}Phase Margin is a measure of stability. \\
-Consider a standard second order system with 
+Consider a unity negative feedback system with open loop gain ,
 \\
 \begin{align}
-G(s)H(s)=\frac{\omega_{n}^{2}}{s(s+2 \delta \omega_{n})}
+G(s)=\frac{10000}{s(s+10)^{2}}
 \label{eq:3} 
 \end{align}
-Sunstituting,s=j$\omega$
+We can find mgnitude and phase as \\
 \begin{align}
-G(j\omega)H(j\omega)=\frac{\omega_{n}^{2}}{(j\omega)(j\omega+2\delta\omega_{n})}
+|G(j\omega)|=\frac{10^{4}}{\omega \sqrt{(\omega^{2}+10^{2})^{2}}} \\
+\angle G(j\omega)=-90^{\circ}-2tan^{-1}\frac{\omega}{10} \label{eq:5} 
+\end{align}
+At the gain cross over frequency $\omega_{gc}$,$|G(j\omega)|=1$
 \\
-\end{align}
-
-At the gain cross over frequency $\omega_{gc}$,$|G(j\omega)H(j\omega)|=1$ 
-
 \begin{align}
-\frac{\omega_{n}^{2}}{\omega_{gc}\sqrt{\omega_{gc}^{2}+4\delta^{2}\omega_{n}^{2}}} =1 
+\frac{10^{4}}{\omega_{gc} \sqrt{(\omega_{gc}^{2}+10^{2})^{2}}}=1 \\
+\end{align}
+Simplifying we get,
+\begin{align}
+\omega_{gc}^{3}+10^{2}\omega_{gc}-10^{4}=0 \\
+=> \omega_{gc}=20,-10+20j,-10-20j
+\end{align}
+As frequency is a real quantity
+\\Hence, $\omega_{gc} \neq$ Imaginary
+\begin{align}
+\therefore  \omega_{gc} =20   \label{eq:6} 
+\end{align}
+From (\ref{eq:5}) and (\ref{eq:6}) we get,
+\begin{align}
+P.M=180^{\circ}-90^{\circ}-2tan^{-1}(\frac{\omega_{gc}}{10}) \\
+=> P.M=-36.9^{\circ}
+\end{align}
+We can verify the above result using phase plot.The following code plots Fig(\ref{fig:ee18btech11017_1})
+\begin{lstlisting}
+codes/ee18btech11017.py
+\end{lstlisting}
+The Phase plot is as shown,
+\begin{figure}[!h]
+  \includegraphics[width=\columnwidth]{./figures/ee18btech11017_1.eps}
+  \caption{}
+  \label{fig:ee18btech11017_1}
+\end{figure}
+We can observe that at $\omega_{gc}=20$ , $\phi=-216.86^{\circ}$
 \\
-==> \omega_{gc}^{4} +4 \delta_{2} \omega_{gc}^{2} \omega_{n}^{2}-\omega_{n}^{4}=0
-\end{align}
-Solving we get,
 \begin{align}
-\omega_{gc}^{2}=\omega_{n}^{2} \sqrt{4\delta^{4}+1} - 2 \delta^{2}
+\therefore P.M=180^{\circ}+-216.86^{\circ}=-36.9^{\circ} \\
 \end{align}
-Phase Margin is given by,
-\begin{align}
-P.M=180^{\circ}+(-90^{\circ}-tan^{-1}(\frac{\omega_{gc}}{2\delta \omega_{n}}))
-\end{align}
-Further simplifying we get
-\begin{align}
-P.M=tan^{-1}(\frac{2\delta \omega_{n}}{\omega_{gc}}) \label{eq:4}
-\end{align}
-We can observe from (\ref{eq:4}) for P.M to be negative \\
-1.$\delta <0$,$\omega_{n} >0$  \\
-2.$\delta >0$,$\omega_{n} <0$   \\
-For both the cases the pole in the Equation(\ref{eq:3}) lie on right half of s-plane . So,the system is unstable.
-
-
-
-
-
-
-
-
-
-
+As Phase Margin is negative . Therefore the closed loop system is unstable .
+We can verify closed loop stability using Routh-Hurwitz criterion.
 
 \end{enumerate}
