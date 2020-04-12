@@ -14,7 +14,7 @@ P.M=\phi-\angle G(j\omega)|_{\omega=\omega_{pc}}=\phi+180^{\circ}
 where,
 \begin{align}
 \phi=\angle G(j\omega)|_{\omega=\omega_{gc}}
-\label{eq:sol}
+\label{eq:1}
 \end{align}
 $\omega_{pc}$ is the Phase crossover frequency (The frequency at which the phase of open-loop transfer function reaches -180$^{\circ}$).\\
 $\omega_{gc}$ is the Gain crossover frequency (The frequency at which the gain of the open-loop transfer fuction reaches 1).\\
@@ -30,7 +30,7 @@ We can find magnitude and phase as
 \begin{align}
 |G(j\omega)|=\frac{2}{(\sqrt{\omega^2+1})(\sqrt{\omega^2+4})}
 \\
-\angle G(j\omega)=- tan^{-1}(\omega) - tan^{-1}(\frac{\omega}{2}) \label{eq:solve}
+\angle G(j\omega)=- tan^{-1}(\omega) - tan^{-1}(\frac{\omega}{2}) \label{eq:2}
 \end{align}
 
 We know that,
@@ -53,7 +53,7 @@ As frequency is a real quantity
 \begin{align}
 \therefore  \omega_{gc} =0
 \end{align}
-From (\ref{eq:solve}) and (\ref{eq:sol})
+From (\ref{eq:1}) and (\ref{eq:2})
 \begin{align}
 \phi= \angle G(j\omega_{gc})= -tan^{-1}(\omega_{gc})-tan^{-1}(\frac{\omega_{gc}}{2})
 \end{align}
@@ -84,4 +84,52 @@ We can observe that at $\omega_{gc}=0$ , $\phi=0^{\circ}$
 \item
 \textbf{Application:} 
 Phase margin is measure of stability in closed-loop, dynamic-control systems.(i.e, For stability of a system both gain margin and phase margin should be positive.)
+\item
+\textbf{Example:}Phase Margin is a measure of stability. \\
+Consider a standard second order system with 
+\\
+\begin{align}
+G(s)H(s)=\frac{\omega_{n}^{2}}{s(s+2 \delta \omega_{n})}
+\label{eq:3} 
+\end{align}
+Sunstituting,s=j$\omega$
+\begin{align}
+G(j\omega)H(j\omega)=\frac{\omega_{n}^{2}}{(j\omega)(j\omega+2\delta\omega_{n})}
+\\
+\end{align}
+
+At the gain cross over frequency $\omega_{gc}$,$|G(j\omega)H(j\omega)|=1$ 
+
+\begin{align}
+\frac{\omega_{n}^{2}}{\omega_{gc}\sqrt{\omega_{gc}^{2}}+4\delta^{2}\omega_{n}^{2}} =1 
+\\
+==> \omega_{gc}^{4} +4 \delta_{2} \omega_{gc}^{2} \omega_{n}^{2}-\omega_{n}^{4}=0
+\end{align}
+Solving we get,
+\begin{align}
+\omega_{gc}^{2}=\omega_{n}^{2} \sqrt{4\delta^{4}+1} - 2 \delta^{2}
+\end{align}
+Phase Margin is given by,
+\begin{align}
+P.M=180^{\circ}+(-90^{\circ}-tan^{-1}(\frac{\omega_{gc}}{2\delta \omega_{n}}))
+\end{align}
+Further simplifying we get
+\begin{align}
+P.M=tan^{-1}(\frac{2\delta \omega_{n}}{\omega_{gc}}) \label{eq:4}
+\end{align}
+We can observe from (\ref{eq:4}) for P.M to be negative \\
+1.$\delta <0$,$\omega_{n} >0$  \\
+2.$\delta >0$,$\omega_{n} <0$   \\
+For both the cases the pole in the Equation(\ref{eq:3}) lie on right half of s-plane . So,the system is unstable.
+
+
+
+
+
+
+
+
+
+
+
 \end{enumerate}
