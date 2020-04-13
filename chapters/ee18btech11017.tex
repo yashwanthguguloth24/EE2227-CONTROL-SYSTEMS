@@ -62,7 +62,7 @@ From (\ref{eq:1}) and (\ref{eq:2})
 \begin{align}
 => \phi=0^{\circ}
 \\
-\therefore P.M=180^{\circ}+0^{\circ}=180^{\circ}
+\therefore P.M=180^{\circ}+0^{\circ}=180^{\circ}    \label{eq:17}
 \end{align}
 
 \item
@@ -80,7 +80,7 @@ The Phase plot is as shown,
 We can observe that at $\omega_{gc}=0$ , $\phi=0^{\circ}$
 \\
 \begin{align}
-\therefore P.M=180^{\circ}
+\therefore P.M=180^{\circ} 
 \end{align}
 \item
 \textbf{Application:} 
@@ -363,6 +363,25 @@ The following code generates routh array.
 codes/RouthHurwitz.py
 \end{lstlisting}
 
+\item
+From Equation (\ref{eq:17}) we can observe that Phase Margin is positive. So,the closed loop system is stable.
+
+Let $T(s)$ be Closed loop transfer function ,
+\begin{align}
+T(s)=\frac{N(s)}{D(s)}=\frac{G(s)}{1+G(s)}
+\end{align}
+The characteristic equation is 
+\begin{align}
+D(s)=0  \\
+1+G(s)=0 
+\end{align}
+
+\begin{align}
+s^{2}+3s+4=0 \\
+=> s=-1.5+1.3j,-1.5-1.3j
+\end{align}
+\\
+The above poles lie on left half of s-plane.So the closed loop system with unity negative feedback is stable.
 
 
 
