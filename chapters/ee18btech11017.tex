@@ -171,19 +171,95 @@ codes/RouthHurwitz.py
 \end{lstlisting}
 
 
+\item
+Now consider $G(s)$ from (\ref{eq:3}),in above example and multiply it with $H(s)=10^{-1}$. So, now open loop gain becomes $G(s)H(s)$.
+\begin{align}
+G(s)H(s)=\frac{1000}{s(s+10)^{2}}
+\label{eq:8} 
+\end{align}
 
+We can find mgnitude and phase as \\
+\begin{align}
+|G(j\omega)H(j\omega)|=\frac{10^{3}}{\omega \sqrt{(\omega^{2}+10^{2})^{2}}} \\
+\angle G(j\omega)H(j\omega)=-90^{\circ}-2tan^{-1}\frac{\omega}{10} \label{eq:9} 
+\end{align}
 
+At the gain cross over frequency $\omega_{gc}$,$|G(j\omega)H(j\omega)|=1$
+\\
+\begin{align}
+\frac{10^{3}}{\omega_{gc} \sqrt{(\omega_{gc}^{2}+10^{2})^{2}}}=1 \\
+\end{align}
 
+Simplifying we get,
+\begin{align}
+\omega_{gc}^{3}+10^{2}\omega_{gc}-10^{3}=0 \\
+=> \omega_{gc}=6.82,-3.41+11.6j,-3.41-11.6j
+\end{align}
+As frequency is a real quantity
+\\Hence, $\omega_{gc} \neq$ Imaginary
+\begin{align}
+\therefore  \omega_{gc} =6.82   \label{eq:10} 
+\end{align}
 
+From (\ref{eq:9}) and (\ref{eq:10}) we get,
+\begin{align}
+P.M=180^{\circ}-90^{\circ}-2tan^{-1}(\frac{\omega_{gc}}{10}) \\
+=> P.M=21.42^{\circ}
+\end{align}
 
+We can verify the above result using phase plot.The following code plots Fig(\ref{fig:ee18btech11017_2})
+\begin{lstlisting}
+codes/ee18btech11017.py
+\end{lstlisting}
+The Phase plot is as shown,
+\begin{figure}[!h]
+  \includegraphics[width=\columnwidth]{./figures/ee18btech11017_2.eps}
+  \caption{}
+  \label{fig:ee18btech11017_2}
+\end{figure}
 
+We can observe that at $\omega_{gc}=6.82$ , $\phi=-158.58^{\circ}$
+\\
+\begin{align}
+\therefore P.M=180^{\circ}+-158.58^{\circ}=21.42^{\circ} \\
+\end{align}
+As Phase Margin is positive. Therefore the closed loop system is stable .
+We can verify closed loop stability using Routh-Hurwitz criterion.
 
+\textbf{Verification}: \\
 
+Verifying the above example using Routh-Hurwitz criterion.\\
+Let $T(s)$ be Closed loop transfer function ,
+\begin{align}
+T(s)=\frac{N(s)}{D(s)}=\frac{G(s)H(s)}{1+H(s)G(s)}
+\end{align}
+The characteristic equation is 
+\begin{align}
+D(s)=0  \\
+1+G(s)H(s)=0 
+\end{align}
 
+\begin{align}
+=> s^{3}+20s^{2}+100s+1000=0   \label{eq:11} 
+\end{align}
+\\
+Constructing routh array for (\ref{eq:11})..,
+\begin{align}
+\mydet{s^3\\s^2\\s}
+\mydet{1 & 100 & 0 \\ 20 & 1000 & 0 \\ 50 & 0 & 0}
+\end{align}\\
 
+\begin{align}
+\mydet{s^3\\s^2\\s\\s^0}
+\mydet{1 & 100 & 0 \\ 20 & 1000 & 0 \\ 50 & 0 & 0 \\ 1000 & 0 & 0}
+\end{align}\\
 
-
-
+There are no sign changes in the first column of the routh array. So, all the poles lie on left half of s-plane. \\
+Therefore,the system is stable.\\
+The following code generates routh array.
+\begin{lstlisting}
+codes/RouthHurwitz.py
+\end{lstlisting}
 
 
 

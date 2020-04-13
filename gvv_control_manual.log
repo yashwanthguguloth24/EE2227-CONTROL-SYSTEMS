@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.4.4)  12 APR 2020 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.4.4)  13 APR 2020 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1331,9 +1331,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-[2])
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+[]\OT1/txr/m/n/12 At the gain cross over fre-quency
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
+File: ./figures/ee18btech11017_2.eps Graphic file (type eps)
+<./figures/ee18btech11017_2.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 221--223
+[]\OT1/txr/m/n/12 We can ob-serve that at $\OML/txmi/m/it/12 ![] \OT1/txr/m/n/1
+2 = 6\OML/txmi/m/it/12 :\OT1/txr/m/n/12 82$ ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+
+ []
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
- [3
+ [4
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
@@ -1345,12 +1394,12 @@ Package rerunfilecheck Info: File `gvv_control_manual.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 31057 strings out of 494881
- 662013 string characters out of 6179628
+ 31065 strings out of 494881
+ 662154 string characters out of 6179628
  875323 words of memory out of 5000000
- 33803 multiletter control sequences out of 15000+600000
+ 33810 multiletter control sequences out of 15000+600000
  54754 words of font info for 123 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
  55i,13n,67p,510b,1033s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_control_manual.dvi (3 pages, 28268 bytes).
+Output written on gvv_control_manual.dvi (4 pages, 38696 bytes).
