@@ -5,6 +5,7 @@
 Find the Phase Margin of $G(s)$ in degrees where
 \begin{align}
 G(s) = \frac{2}{(s+1)(s+2)}
+\label{eq:12}
 \end{align}
 \solution \textbf{Phase Margin}:It is the difference between phase of the system and $-180^{\circ}$ at the gain crossover frequency,(the gain crossover frequency being the frequency at which the open-loop gain first reaches 1).\\
 Phase Margin is given by,
@@ -261,9 +262,106 @@ The following code generates routh array.
 codes/RouthHurwitz.py
 \end{lstlisting}
 
+\item
+Consider $G(s)$ in Equation(\ref{eq:12}) and mulitply it with $H(s)=\frac{100}{s+1}$ . So, now the open loop gain becomes $G(s)H(s)$.
+
+\begin{align}
+G(s)H(s)=\frac{100}{(s+1)^{2}(s+2)}
+\label{eq:13} 
+\end{align}
+
+We can find mgnitude and phase as \\
+\begin{align}
+|G(j\omega)H(j\omega)|=\frac{10^{2}}{ \sqrt{(\omega^{2}+1)^{2}}
+\sqrt{\omega^{2}+4}} \\
+\angle G(j\omega)H(j\omega)=-tan^{-1}\frac{\omega}{2}-2tan^{-1}(\omega) \label{eq:14} 
+\end{align}
+
+At the gain crossover frequency $\omega_{gc}$,$|G(j\omega)H(j\omega)|=1$
+\\
+\begin{align}
+\frac{10^{2}}{\sqrt{\omega_{gc}^{2}+4} \sqrt{(\omega_{gc}^{2}+10^{2})^{2}}}=1 \\
+\end{align}
+
+Simplifying we get,
+\begin{align}
+\omega_{gc}^{6}+6\omega_{gc}^{4}+9\omega_{gc}^{2}-9996=0 
+\end{align}
+\\
+Values of $\omega_{gc}$ are 
+\begin{align}
+=> \omega_{gc}=-4.42,4.42,-2.21+4.2j, \\
+-2.21-4.2j,2.21+4.2j,2.21-4.2j
+\end{align}
+
+As frequency is a real quantity
+\\Hence, $\omega_{gc} \neq$ Imaginary , Negative
+\begin{align}
+\therefore  \omega_{gc} = 4.42  \label{eq:15} 
+\end{align}
+
+From (\ref{eq:14}) and (\ref{eq:15}) we get,
+\begin{align}
+P.M=180^{\circ}-2tan^{-1}(\omega_{gc})-tan^{-1}(\frac{\omega_{gc}}{2}) \\
+=> P.M=-40.15^{\circ}
+\end{align}
+
+We can verify the above result using phase plot.The following code plots Fig(\ref{fig:ee18btech11017_3})
+\begin{lstlisting}
+codes/ee18btech11017.py
+\end{lstlisting}
+The Phase plot is as shown,
+\begin{figure}[!h]
+  \includegraphics[width=\columnwidth]{./figures/ee18btech11017_3.eps}
+  \caption{}
+  \label{fig:ee18btech11017_3}
+\end{figure}
+
+We can observe that at $\omega_{gc}=4.42$ , $\phi=-220.15^{\circ}$
+\\
+\begin{align}
+\therefore P.M=180^{\circ}+-220.15^{\circ}=-40.15^{\circ} 
+\end{align}
+\\
+As Phase Margin is negative. Therefore the closed loop system is unstable .
+We can verify closed loop stability using Routh-Hurwitz criterion.
+
+\textbf{Verification}: \\
+
+Verifying the above problem using Routh-Hurwitz criterion.\\
+Let $T(s)$ be Closed loop transfer function ,
+\begin{align}
+T(s)=\frac{N(s)}{D(s)}=\frac{G(s)H(s)}{1+H(s)G(s)}
+\end{align}
+The characteristic equation is 
+\begin{align}
+D(s)=0  \\
+1+G(s)H(s)=0 
+\end{align}
 
 
+\begin{align}
+=> s^{3}+4s^{2}+5s+102=0   \label{eq:16} 
+\end{align}
 
+
+Constructing routh array for (\ref{eq:16})..,
+\begin{align}
+\mydet{s^3\\s^2\\s}
+\mydet{1 & 5 & 0 \\ 4 & 102 & 0 \\ -20.5 & 0 & 0}
+\end{align}\\
+
+\begin{align}
+\mydet{s^3\\s^2\\s\\s^0}
+\mydet{1 & 5 & 0 \\ 4 & 102 & 0 \\ -20.5 & 0 & 0 \\ 102 & 0 & 0}
+\end{align}\\
+
+There are two sign changes in the first column of the routh array. So, two   poles lie on right half of s-plane. \\
+Therefore,the system is unstable.\\
+The following code generates routh array.
+\begin{lstlisting}
+codes/RouthHurwitz.py
+\end{lstlisting}
 
 
 
