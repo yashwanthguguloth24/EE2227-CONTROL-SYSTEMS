@@ -4,7 +4,7 @@
 \usepackage{gensymb}
 %\doublespacing
 \singlespacing
-\usepackage{graphicx}
+
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -34,12 +34,13 @@
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usepackage{verbatim}
-\usepackage{caption}
 %\usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
 %\usepackage{stmaryrd}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usetkzobj{all}
+\usetikzlibrary{decorations.markings}
+\newif\iflabrev
 \usepackage{listings}
     \usepackage{color}                                            %%
     \usepackage{array}                                            %%
@@ -162,9 +163,9 @@ columns=fullflexible
 \vspace{3cm}
 
 \title{
-	\logo{
+%	\logo{
 Control Systems
-	}
+%	}
 }
 \author{ G V V Sharma$^{*}$% <-this % stops a space
 	\thanks{*The author is with the Department
@@ -237,7 +238,7 @@ Control Systems
 
 
 % make the title area
-%\maketitle
+\maketitle
 
 \newpage
 
@@ -286,49 +287,43 @@ Download python codes using
 svn co https://github.com/gadepall/school/trunk/control/codes
 \end{lstlisting}
 
-%\section{Bode Plot}
-%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-%}
-%\end{enumerate}
-%\section{Stability}
-%\subsection{Second order System}
+\section{Mason's Gain Formula}
+%\input{./chapters/ee18btech11003.tex}
+\section{Bode Plot}
+\subsection{Introduction}
+%\input{./chapters/ee18btech11001.tex}
+\subsection{Example}
+%\input{./chapters/ee18btech11009.tex}
+\section{Second order System}
+\subsection{Damping}
+%\input{./chapters/ee18btech11012.tex}
+\subsection{Example}
+%\input{./chapters/ee18btech11002.tex}
+\section{Routh Hurwitz Criterion}
+\subsection{Routh Array}
+%\input{./chapters/ee18btech11014.tex}
+\subsection{Marginal Stability}
+%\input{./chapters/ee18btech11005.tex}
+\subsection{Stability}
+%\input{./chapters/ee18btech11008.tex}
+\section{State-Space Model}
+\subsection{Controllability and Observabiity}
+%\input{./chapters/ee18btech11004.tex}
+%\input{./chapters/ee18btech11006.tex}
+\subsection{Second Order System}
+%\input{./chapters/ee18btech11011.tex}
 
-%\section{Routh Hurwitz Criterion}
+\section{Nyquist Plot}
+%\input{./chapters/ee18btech11007.tex}
 
-%\section{Compensators}
+\section{Compensators}
+%\input{./chapters/ee18btech11010.tex}
 \section{Phase Margin}
 \input{./chapters/ee18btech11017.tex}
-
-%\section{Triangle}
-%\subsection{Triangle Examples}
-%\input{./triangle/tri_exam.tex} 
-%\subsection{Triangle Exercises}
-%\input{./triangle/tri_geo.tex} 
-%%
-%\section{Quadrilateral}
-%\subsection{Quadrilateral Examples}
-%\input{./quad/quad_geo_exam.tex} 
-%\subsection{Quadrilateral Geometry}
-%\input{./quad/quad_geo.tex} 
-%
-%\section{Constrained Optimization}
-%%\subsection{Equality Constraint}
-%\input{./chapters/line_exam.tex}
-%\section{Convex Function}
-%\input{./chapters/conv.tex}
-%\section{Gradient Descent}
-%\input{./chapters/grad_des.tex}
-%\section{Lagrange Multipliers}
-%\input{./chapters/lagrange.tex}
-%\section{Quadratic Programming}
-%\input{./chapters/qp.tex}
-%\section{Semi Definite Programming}
-%\input{./chapters/sdp.tex}
-%\section{Linear Programming}
-%\input{./chapters/lp_exam.tex}
-%\section{Exercises}
-%\input{./chapters/lp_exer.tex}
+\section{Gain Margin}
+%\input{./chapters/ee18btech11016.tex}
 
 
 \end{document}
+
+
